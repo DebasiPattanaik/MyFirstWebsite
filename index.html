@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debasi Pattanaik - Major Project</title>
+
+    
+    <style>
+        body{
+           background-image: url(https://cdn.wallpapersafari.com/27/32/jt4AoG.jpg);
+           background-size: cover;
+            }
+
+/*header*/
+        header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: sticky;
+        }
+        .logo{
+    height: 80px;
+    width:370px;
+    background-image: url(https://www.luneblaze.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLuneblaze%20-%20Logo.f4c94c37.png&w=1080&q=75);
+    background-size: cover;
+    display: inline-block;
+        }
+       .links{
+    width: 330px;
+    display: flex;
+    justify-content: space-around;
+        }
+
+/*main*/
+       main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+      }
+      .form{
+    margin:50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+       }
+       .bgimg{
+    background-image: url(https://www.luneblaze.com/images/homepagebanner.png);
+    background-size: cover;
+    margin: 50px;
+    padding: 30px;
+    height: 533px;
+    width: 444px;
+       }
+       input{
+    font-size: 3vh;
+       }
+      .formerror{
+    color: red;
+       }
+       #cross{
+    width: 90%;
+    text-align: end;
+    font-size: x-large;
+       }
+       #cross:hover{
+    font-size: xx-large;
+       }
+       .regis{
+    font-size: 3vh;
+    background: linear-gradient(to right, #0739c4, #02ffb3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+      }
+      .createAcc{
+    width: 60%;
+    height:6vh;
+    font-size: 4vh;
+    color: white;
+    background-image: linear-gradient(to right, #0739c4 , #02ffb3);
+      }
+      .createAcc:hover{
+    border: 5px solid black;
+      }
+ 
+/*footer*/
+      footer{
+    background-color: black;
+    color: lightgray;
+      }
+      .details{
+    width: 100%;
+    padding: 4vh, 0vh, 4vh, 0vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+       }
+       .copyright{
+    text-align: center;
+       }
+       .img{
+    background-image:url(https://www.luneblaze.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLuneblaze%20-%20Logo.f4c94c37.png&w=1080&q=75);
+    background-size: cover;
+    width: 23vh;
+    height: 5vh;
+       }
+       .column{
+    display: inline-block;
+       }
+       li{
+    font-size: large;
+        }
+
+
+/*collective changes*/
+        @media(max-width:700px){
+           header{
+        flex-direction: column;
+           }
+           main{
+        flex-direction: column;
+           }
+           .form{
+        height: 50%;
+        width: 90%;
+           }
+           .details{
+        flex-direction: column;
+           }
+       }
+        @media(min-width:701px){
+            header{
+        flex-direction: row;
+            }
+            main{
+         flex-direction: row;
+            }
+           .form{
+        height: 75%;
+        width: 40%;
+            }
+            .details{
+        flex-direction: row;
+             }
+        }
+        a{
+    color: rgb(194, 191, 191);
+    text-decoration: none;
+    font-size: medium;
+    font-family: sans-serif;
+        }    
+        a:hover{
+    color: rgb(4, 199, 199);
+    text-decoration: underline;
+    font-size: large;
+        }
+        i{
+    color:rgb(194, 191, 191) ;
+    font-size: large;
+    display: inline-block;
+    width: 5vh;
+        }
+        i:hover{
+    color:rgb(4, 199, 199) ;
+    font-size: x-large;
+        }
+    </style>
+     
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo"> </div>
+        <div class="links">
+           <a href="https://www.luneblaze.com/">Home</a>
+           <a href="https://www.luneblaze.com/naac" >NAAC</a>
+           <a href="https://www.luneblaze.com/sqaaf">SQAAF</a>
+           <a href="https://www.luneblaze.com/internships">Internships</a>
+           <a href="https://www.luneblaze.com/nep">NEP</a>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="form" id="form">
+            <i class="fa-solid fa-xmark" id="cross"></i>
+            <div class="regis"><h1>Registration Form</h1></div>
+            <form action="https://www.luneblaze.com/" name="mainForm" onsubmit="return validate()" method="post">
+                <div id="name">
+                    <input name="fname" type="text" placeholder="Name" required><br>
+                    <b><span class="formerror"></span></b>
+                </div>
+                <p></p>
+                <div id="email" >
+                    <input name="femail" type="email" placeholder="Email address" required><br>
+                    <b><span class="formerror"></span></b>
+                </div>
+                <p></p>
+                <div id="country">
+                    <input name="fcountry" type="text" placeholder="Country" required><br>
+                    <b><span class="formerror"></span></b>
+                </div>
+                <p></p>
+                <div id="phone">
+                    <input  name="fphone" type="tail" placeholder="Phone" required><br>
+                    <b><span class="formerror"></span></b>
+                </div>
+                <p></p>
+                <div id="password" >
+                    <input name="fpassword" type="password" placeholder="Password" required><br>
+                    <b><span class="formerror"></span></b>
+                </div>
+                <p></p>
+                <p><input type="checkbox" value="">Terms and conditions cover user reponsibilities, privacy policies, legal disclamers and copyright issues.</p>
+                <p></p>
+                <button type="submit" class="createAcc">Create Account</button>
+            </form>
+            <p>Already have an account? <a href="https://luneblazeportal.com/login">Sign in</a></p>
+        </div>
+        <div class="bgimg"></div>
+    </main>
+
+
+    <footer>
+        <p></p>
+        <div class="details">
+            <div class="column">
+                <div class="img"></div>
+                <h2>Better Eduaction</h2>
+                <h2>Better Tomorrow</h2>
+                <a href="https://www.instagram.com/luneblaze/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/luneblaze"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/luneblaze"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/luneblaze"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <div class="column">
+                <h1>Explore</h1>
+                <ul>
+                    <li><a href="https://www.luneblaze.com/blogs">Blog</a></li>
+                    <li><a href="https://www.luneblaze.com/faqs">Faq</a></li>
+                    <li><a href="https://www.luneblaze.com/luneblaze-internships">Internship</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h1>Links</h1>
+                <ul>
+                    <li><a href="https://www.inspirin.in/">Inspirin Magazine</a> </li>
+                    <li><a href="https://www.luneblaze.com/privacy-policy" >Privacy</a></li>
+                    <li><a href="https://www.luneblaze.com/terms">Terms</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h1>Contact</h1>
+                <ul>
+                    <li>contact@luneblaze.com</li>
+                    <li>3rd Floor, Indian Overseas Bank, JC Bose University Campus, YMCA, Faridabad -121006</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+              <p>Copyright © 2023 by Avadna Services Pvt Ltd.</p>
+              <p> All Rights Reserved.</p>
+              <p></p>
+        </div>
+    </footer>
+
+
+    <script>
+        function clearErrors()
+        {
+    errors = document.getElementsByClassName('formerror');
+    for(let item of errors)
+    {
+        item.innerHTML = "";
+    }
+        }
+
+        function seterror(id, error)
+        {
+    element = document.getElementById(id);
+    element.getElementsByClassName('formerror')[0].innerHTML = error;
+        }
+
+        function validate()
+        {
+    var returnval = true;
+    clearErrors();
+
+    var name = document.forms['mainForm']["fname"].value;
+
+    if (name.length == 0){
+        seterror("name", "*Enter Name");
+        returnval = false;
+    }
+
+    var email = document.forms['mainForm']["femail"].value;
+
+    var phone = document.forms['mainForm']["fphone"].value;
+
+    if (phone.length != 10){
+        seterror("phone", "*Phone number should be of 10 digits!");
+        returnval = false;
+    }
+
+    var password = document.forms['mainForm']["fpassword"].value;
+
+    if (password.length < 8){
+        seterror("password", "*Password should be atleast 8 characters long!");
+        returnval = false;
+    }
+    else if(password.indexOf(' ') == -1){
+        seterror("password", "*Password should not contain Blank Spaces!");
+        returnval = false;
+    }
+
+    return returnval;
+    }
+    </script>
+</body>
+</html>
